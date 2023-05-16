@@ -1,0 +1,76 @@
+@import "../main/variables.scss";
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+
+  &Contacts {
+    p {
+      color: $gray-400;
+      font-weight: 300;
+
+      span {
+        margin: 0px 5px;
+      }
+    }
+  }
+
+  &Delivery {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 10px;
+    }
+
+    &__info {
+      max-width: 200px;
+      width: 100%;
+      p {
+        font-size: 12px;
+        font-weight: 300;
+        color: $gray-400;
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  &Logo {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 10px;
+    }
+    h3 {
+      font-size: 24px;
+      color: $text;
+    }
+  }
+  &List {
+    display: flex;
+    &__item {
+      font-size: 16px;
+      color: $text;
+      cursor: pointer;
+    }
+
+    &__item + li,
+    &__item:first-child {
+      margin-right: 14px;
+    }
+  }
+  &Cart {
+    display: flex;
+
+    img:first-child {
+      margin-right: 10px;
+    }
+  }
+}

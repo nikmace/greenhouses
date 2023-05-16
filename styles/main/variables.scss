@@ -1,0 +1,69 @@
+$main: #fefefe;
+$secondary: #d5ac3c;
+
+$gray-0: #b1b1b1;
+
+$titleFont: "Jost";
+$text: var(--text);
+
+$body: var(--body);
+$button: var(--button);
+$buttonColor: var(--buttonColor);
+$range: var(--range);
+$modalTitle: var(--range);
+
+$logo: var(--logo);
+$mainBg: var(--mainBg);
+$box: var(--box);
+$border: var(--border);
+$table: var(--table);
+
+$gray: var(--gray);
+$gray-100: var(--gray-100);
+$gray-200: var(--gray-200);
+$gray-300: var(--gray-300);
+$gray-400: var(--gray-400);
+$gray-500: var(--gray-500);
+$gray-600: var(--gray-600);
+$gray-700: var(--gray-700);
+
+$textColor: var(--textColor);
+$textColor2: var(--textColor2);
+$textColor3: var(--textColor3);
+
+$paleGreen: var(--paleGreen);
+$brightGreen: var(--brightGreen);
+
+$swap: var(--swap);
+:root {
+  --body: #1e293b;
+  --button: #6dc82b;
+  --buttonColor: #56677e;
+  --range: #3f4f66;
+  --modalTitle: #2c394c;
+
+  --logo: #ffffff;
+  --mainBg: #334155;
+  --box: #3f4f66;
+  --border: #56677e;
+  --table: #334155;
+  --text: #212832;
+
+  --gray: #56677e;
+  --gray-100: #405067;
+  --gray-200: #b5bac1;
+  --gray-300: #56677e;
+  --gray-400: #9ca2ac;
+  --gray-500: #b5bac1;
+  --gray-600: #b5bac1;
+  --gray-700: #e6ecf4;
+
+  --textColor: #ffffff;
+  --textColor2: #ffffff;
+  --textColor3: #ffffff;
+
+  --paleGreen: #48c4a0;
+  --brightGreen: #6dc82b;
+}
+
+$mainFont: "Rubik", sans-serif;

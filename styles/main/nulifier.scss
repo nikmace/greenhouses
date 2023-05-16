@@ -1,0 +1,18 @@
+.auto__container {
+  position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 21px;
+}
+
+.buttonMain {
+  background-color: $brightGreen;
+  border-radius: 13px;
+  padding: 14px 54px;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #82d14a;
+  }
+}

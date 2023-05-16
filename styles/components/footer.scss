@@ -1,0 +1,60 @@
+.footer {
+  background: #f6f6f6;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    gap: 30px;
+    padding: 36px 0px;
+
+    &Company {
+      &__logo {
+        display: flex;
+        align-items: center;
+        padding-bottom: 15px;
+
+        img {
+          margin-right: 10px;
+        }
+        h3 {
+          font-size: 24px;
+          color: $text;
+        }
+      }
+      &__text {
+        color: $gray-200;
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__list {
+    h5 {
+      font-size: 13px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    &Item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      a {
+        font-size: 12px;
+        color: #616161;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      p {
+        font-size: 12px;
+        color: #616161;
+      }
+      img {
+        margin-right: 5px;
+      }
+    }
+  }
+}

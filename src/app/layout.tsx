@@ -2,6 +2,9 @@ import React from "react";
 
 import { Lato } from "@next/font/google";
 
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+
 import "../../styles/globals.scss";
 
 // If loading a variable font, you don't need to specify the font weight
@@ -19,15 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={lato.className}>
       <head>
-        <title>Mike van Peeren</title>
+        <title>Agrosfera</title>
       </head>
-      <body className="bg-black">
-        <div className="mx-auto max-w-screen-lg px-6 py-12">
-          <div className="col-start-2">
-            {/* Here you can place your Navigation */}
-          </div>
-          <div>{children}</div>
-        </div>
+      <body className="bg-[#fefefe]">
+        <Header />
+        <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );

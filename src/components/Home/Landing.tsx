@@ -37,7 +37,9 @@ const Landing = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Inventore, laboriosam quia ipsam.
                 </p>
-                <button className="buttonMain">See Catalogue</button>
+                <Link href="/catalogue" className="buttonMain">
+                  See Catalogue
+                </Link>
               </div>
             </div>
           </div>

@@ -59,6 +59,26 @@
       font-size: 16px;
       color: $text;
       cursor: pointer;
+
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        position: relative;
+      }
+      a.active {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 15px;
+          width: 40px;
+          height: 8px;
+          transform: skew(-12deg) translateX(-50%);
+          background: $paleGreen;
+          z-index: -1;
+        }
+      }
     }
 
     &__item + li,

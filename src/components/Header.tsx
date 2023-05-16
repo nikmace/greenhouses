@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+
+import Nav from "./Nav/Nav";
 
 const Header = () => {
   return (
@@ -25,54 +26,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="nav">
-          <Link href="/" className="navLogo">
-            <Image
-              width={42}
-              height={42}
-              src="/images/logo.png"
-              alt="Agromir Logo"
-            />
-            <h3>Agromir</h3>
-          </Link>
-          <ul className="navList">
-            <li className="navList__item">
-              <a href="/">Home</a>
-            </li>
-            <li className="navList__item">
-              <a href="/">Catalogue</a>
-            </li>
-            <li className="navList__item">
-              <a href="/">Payment</a>
-            </li>
-            <li className="navList__item">
-              <a href="/">Delivery</a>
-            </li>
-            <li className="navList__item">
-              <a href="/">Installation</a>
-            </li>
-            <li className="navList__item">
-              <a href="/">Contacts</a>
-            </li>
-            <li className="navList__item">
-              <a href="/">About</a>
-            </li>
-          </ul>
-          <div className="navCart">
-            <Image
-              width={24}
-              height={24}
-              src="/images/searchIcon.svg"
-              alt="Search"
-            />
-            <Image
-              width={24}
-              height={24}
-              src="/images/cartIcon.svg"
-              alt="Cart"
-            />
-          </div>
-        </div>
+        <Nav />
       </div>
     </div>
   );

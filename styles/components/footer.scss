@@ -61,6 +61,15 @@
 
 @media (max-width: 860px) {
   .footer__inner {
-    grid-template-columns: 1fr;
+    padding: 36px 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 }

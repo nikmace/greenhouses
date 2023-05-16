@@ -1,10 +1,17 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
+
 const PreviewCard = () => {
   return (
-    <div className="cataloguePreview__previewItem">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      className="cataloguePreview__previewItem"
+    >
       <Image
         width={294}
         height={299}
@@ -49,7 +56,7 @@ const PreviewCard = () => {
           Buy in 1 click
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import PreviewCard from "../Cards/PreviewCard";
+import Gallery from "../Gallery/Gallery";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400", "500"],
@@ -72,6 +73,8 @@ const Landing = () => {
               <PreviewCard />
             </div>
           </div>
+
+          <Gallery />
         </div>
       </div>
     </div>

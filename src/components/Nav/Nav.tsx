@@ -34,19 +34,41 @@ const Nav = () => {
           </Link>
         </li>
         <li className="navList__item">
-          <Link href="/">Payment</Link>
+          <Link
+            href="/payment"
+            className={pathname === "/payment" ? "active" : ""}
+          >
+            Payment
+          </Link>
         </li>
         <li className="navList__item">
-          <Link href="/">Delivery</Link>
+          <Link
+            href="/delivery"
+            className={pathname === "/delivery" ? "active" : ""}
+          >
+            Delivery
+          </Link>
         </li>
         <li className="navList__item">
-          <Link href="/">Installation</Link>
+          <Link
+            href="/installation"
+            className={pathname === "/installation" ? "active" : ""}
+          >
+            Installation
+          </Link>
         </li>
         <li className="navList__item">
-          <Link href="/">Contacts</Link>
+          <Link
+            href="/contacts"
+            className={pathname === "/contacts" ? "active" : ""}
+          >
+            Contacts
+          </Link>
         </li>
         <li className="navList__item">
-          <Link href="/">About</Link>
+          <Link href="/about" className={pathname === "/about" ? "active" : ""}>
+            About
+          </Link>
         </li>
       </ul>
       <div className="navCart">

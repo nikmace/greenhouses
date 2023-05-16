@@ -10,7 +10,7 @@ const Header = () => {
         <div className="banner">
           <div className="bannerContacts">
             <p>
-              +359 88 64286512 <span>•</span> agrosfera@gmail.bg
+              +359 88 64286512 <span>•</span> agromir.help@gmail.bg
             </p>
           </div>
           <div className="bannerDelivery">
@@ -31,9 +31,9 @@ const Header = () => {
               width={42}
               height={42}
               src="/images/logo.png"
-              alt="Agrosfera Logo"
+              alt="Agromir Logo"
             />
-            <h3>Agrosfera</h3>
+            <h3>Agromir</h3>
           </Link>
           <ul className="navList">
             <li className="navList__item">

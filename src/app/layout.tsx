@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={lato.className}>
       <head>
-        <title>Agrosfera</title>
+        <title>Agromir</title>
       </head>
       <body className="bg-[#fefefe]">
         <Header />

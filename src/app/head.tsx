@@ -1,8 +1,8 @@
 export default function Head() {
   return (
     <>
-      <title>Agrosfera</title>
-      <meta name="description" content="Agrosfera Greenhouses" />
+      <title>Agromir</title>
+      <meta name="description" content="Agromir Greenhouses" />
       <link rel="icon" href="/favicon.ico" />
     </>
   );

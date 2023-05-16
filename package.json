@@ -1,6 +1,6 @@
 {
-  "name": "agrosfera",
-  "description": "Greenhouses Agrosfera",
+  "name": "agromir",
+  "description": "Greenhouses Agromir",
   "version": "1.0.0",
   "author": {
     "name": "Nikita Baranov",
@@ -8,7 +8,8 @@
   },
   "license": "MIT",
   "keywords": [
-    "agrosfera"
+    "Agromir",
+    "Greenhouses"
   ],
   "scripts": {
     "dev": "next dev",

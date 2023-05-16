@@ -12,9 +12,9 @@ const Footer = () => {
                 width={42}
                 height={42}
                 src="/images/logo.png"
-                alt="Agrosfera Logo"
+                alt="Agromir Logo"
               />
-              <h3>Agrosfera</h3>
+              <h3>Agromir</h3>
             </div>
             <p className="footer__innerCompany__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
@@ -41,7 +41,7 @@ const Footer = () => {
                   src="/images/emailIcon.svg"
                   alt="Email Icon"
                 />
-                <p>agrosfera@gmail.bg</p>
+                <p>Agromir@gmail.bg</p>
               </div>
               <div className="footer__listItem">
                 <Image
@@ -80,16 +80,16 @@ const Footer = () => {
             <div className="footer__list">
               <h5>Categories</h5>
               <div className="footer__listItem">
-                <a>Agrosfera-Standard</a>
+                <a>Agromir-Standard</a>
               </div>
               <div className="footer__listItem">
-                <a>Agrosfera-Plus</a>
+                <a>Agromir-Plus</a>
               </div>
               <div className="footer__listItem">
-                <a>Agrosfera-Prestige</a>
+                <a>Agromir-Prestige</a>
               </div>
               <div className="footer__listItem">
-                <a>Agrosfera-Titan</a>
+                <a>Agromir-Titan</a>
               </div>
             </div>
           </div>

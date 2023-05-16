@@ -32,7 +32,7 @@ const Landing = () => {
                 alt="Hero Section Greenhouse"
               />
               <div className="jumbotron__wrapperInfo">
-                <h1 style={playfairDisplay.style}>Agrosfera Greenhouses</h1>
+                <h1 style={playfairDisplay.style}>Agromir Greenhouses</h1>
                 <p style={playfairDisplay.style}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Inventore, laboriosam quia ipsam.

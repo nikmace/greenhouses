@@ -132,19 +132,22 @@
 @media (max-width: 860px) {
   .landing {
     padding: 40px 0px;
-  }
-  .landing__inner .jumbotron__wrapper {
-    &Info {
-      h1 {
-        font-size: 48px;
-        color: rgb(29, 29, 29);
+
+    &__inner {
+      .jumbotron__wrapper {
+        &Info {
+          h1 {
+            font-size: 48px;
+            color: rgb(29, 29, 29);
+          }
+          p {
+            color: rgb(29, 29, 29);
+          }
+        }
+        &Bg {
+          display: none;
+        }
       }
-      p {
-        color: rgb(29, 29, 29);
-      }
-    }
-    &Bg {
-      display: none;
     }
   }
   .landing__inner .jumbotron__wrapperMobileBg {
@@ -154,5 +157,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .landing__inner .cataloguePreview__preview {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .landing__inner .cataloguePreview__preview {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .landing__inner .cataloguePreview__preview {
+    justify-items: center;
+    grid-template-columns: 1fr !important;
   }
 }

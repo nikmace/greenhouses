@@ -1,6 +1,9 @@
 import React from "react";
 import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
+
+import PreviewCard from "../Cards/PreviewCard";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400", "500"],
@@ -19,6 +22,13 @@ const Landing = () => {
                 height={501}
                 className="jumbotron__wrapperBg"
                 src="/images/jumbotron.png"
+                alt="Hero Section Greenhouse"
+              />
+              <Image
+                width={422}
+                height={489}
+                className="jumbotron__wrapperMobileBg"
+                src="/images/abstractRectangle2.png"
                 alt="Hero Section Greenhouse"
               />
               <div className="jumbotron__wrapperInfo">
@@ -47,7 +57,19 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="cataloguePreview">s</div>
+          <div className="cataloguePreview">
+            <div className="cataloguePreview__heading">
+              <h3>Catalogue</h3>
+              <Link href="/">see more</Link>
+            </div>
+
+            <div className="cataloguePreview__preview">
+              <PreviewCard />
+              <PreviewCard />
+              <PreviewCard />
+              <PreviewCard />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -16,3 +16,30 @@
     background-color: #82d14a;
   }
 }
+
+.buttonBuy {
+  background-color: $brightGreen;
+  border-radius: 13px;
+  font-size: 12px;
+  padding: 4px 16px;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #82d14a;
+  }
+}
+
+.buttonBuyAlt {
+  // background-color: $brightGreen;
+  border-radius: 13px;
+  border: 1px solid $brightGreen;
+  font-size: 12px;
+  padding: 4px 16px;
+  color: $text;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #82d14a;
+  }
+}

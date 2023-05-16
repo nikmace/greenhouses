@@ -1,7 +1,6 @@
 import React from "react";
+import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
-
-import { Playfair_Display } from "@next/font/google";
 
 const playfairDisplay = Playfair_Display({
   weight: ["400", "500"],

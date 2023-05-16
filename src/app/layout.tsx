@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Lato } from "@next/font/google";
+import { Lato } from "next/font/google";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";

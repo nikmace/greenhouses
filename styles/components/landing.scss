@@ -153,6 +153,28 @@
   }
 }
 
+.contact {
+  padding-top: 90px;
+  &__inner {
+    &Heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 30px;
+      h3 {
+        font-size: 24px;
+        font-weight: 300;
+      }
+      p {
+        color: var(--gray-300);
+      }
+    }
+    &Form {
+      padding-top: 30px;
+    }
+  }
+}
+
 @media (max-width: 860px) {
   .landing {
     padding: 40px 0px;

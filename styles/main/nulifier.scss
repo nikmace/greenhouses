@@ -17,6 +17,21 @@
   }
 }
 
+.contactBtn {
+  width: 100%;
+  border: 1px solid $brightGreen;
+
+  border-radius: 13px;
+  padding: 4px 16px;
+  font-size: 13px;
+  transition: background-color 0.3s ease-in-out;
+  
+  &:hover {
+    background-color: #82d14a;
+    color: #fff;
+  }
+}
+
 .buttonBuy {
   background-color: $brightGreen;
   border-radius: 13px;

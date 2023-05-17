@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "framer-motion": "^10.12.11",
     "next": "^13.4.1",

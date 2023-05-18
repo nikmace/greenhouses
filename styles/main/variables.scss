@@ -5,6 +5,7 @@ $gray-0: #b1b1b1;
 
 $titleFont: "Jost";
 $text: var(--text);
+$textHover: var(--textHover);
 
 $body: var(--body);
 $button: var(--button);
@@ -48,6 +49,7 @@ $swap: var(--swap);
   --border: #56677e;
   --table: #334155;
   --text: #212832;
+  --textHover: #606c7d;
 
   --gray: #56677e;
   --gray-100: #405067;

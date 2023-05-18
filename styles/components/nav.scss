@@ -7,13 +7,13 @@
   padding: 10px 0px;
 
   &Contacts {
-    p {
+    a {
       color: $gray-400;
       font-weight: 300;
-
-      span {
-        margin: 0px 5px;
-      }
+    }
+    span {
+      color: $gray-400;
+      margin: 0px 5px;
     }
   }
 
@@ -65,6 +65,10 @@
         text-transform: uppercase;
         letter-spacing: 0.15em;
         position: relative;
+
+        &:hover {
+          color: $textHover;
+        }
       }
       a.active {
         &::before {

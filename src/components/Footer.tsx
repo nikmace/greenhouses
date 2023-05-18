@@ -23,8 +23,8 @@ const Footer = () => {
           </div>
 
           <div className="footer__innerContact">
-            <div className="footer__list">
-              <h5>Contact</h5>
+            <address className="footer__list">
+              <h5>Информация за контакт</h5>
               <div className="footer__listItem">
                 <Image
                   width={24}
@@ -32,7 +32,7 @@ const Footer = () => {
                   src="/images/phoneIcon.svg"
                   alt="Phone Icon"
                 />
-                <p>+359 (406) 555-0120</p>
+                <a href="tel:+3594065550120">+359 (406) 555-0120</a>
               </div>
               <div className="footer__listItem">
                 <Image
@@ -41,7 +41,7 @@ const Footer = () => {
                   src="/images/emailIcon.svg"
                   alt="Email Icon"
                 />
-                <p>Agromir@gmail.bg</p>
+                <a href="mailto:agromir@gmail.bg">agromir@gmail.bg</a>
               </div>
               <div className="footer__listItem">
                 <Image
@@ -50,9 +50,11 @@ const Footer = () => {
                   src="/images/addressIcon.svg"
                   alt="Address Icon"
                 />
-                <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                <a href="https://www.google.com/maps/place/%D0%A2%D0%B5%D1%81%D0%BB%D0%B0+%D0%A1%D1%82%D0%B8%D0%B8%D0%BB+%D0%9E%D0%9E%D0%94/@42.6606457,23.3147734,18.8z/data=!4m6!3m5!1s0x40aa8501aee5a9ad:0xe0c966354b18ea2d!8m2!3d42.660321!4d23.3150033!16s%2Fg%2F11fvwhl95k">
+                  ул. „Кишинев“ 7, 1407 Хладилника, София
+                </a>
               </div>
-            </div>
+            </address>
           </div>
 
           <div className="footer__innerLinks">

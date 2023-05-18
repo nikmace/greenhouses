@@ -10,9 +10,9 @@ const Header = () => {
         {/* Here you can place your Navigation */}
         <div className="banner">
           <div className="bannerContacts">
-            <p>
-              +359 88 64286512 <span>•</span> agromir.help@gmail.bg
-            </p>
+            <a href="tel:+3598864286512">+359 88 64286512</a>
+            <span>•</span>
+            <a href="mailto:agromir.help@gmail.bg">agromir.help@gmail.bg</a>
           </div>
           <div className="bannerDelivery">
             <Image

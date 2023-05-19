@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+
+import CatalogueCategories from "@/components/Catalogue/CatalogueCategories";
 
 const Catalogue = () => {
-  return (
-    <div>Catalogue</div>
-  )
-}
+  return <CatalogueCategories />;
+};
 
-export default Catalogue
+export default Catalogue;

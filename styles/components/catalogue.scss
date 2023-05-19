@@ -1,0 +1,34 @@
+.catalogue {
+  padding: 90px 0px 60px 0px;
+  &__inner {
+    &Banner {
+    }
+  }
+  .categories {
+    &__breadcrumbs {
+      ul {
+        display: flex;
+        li {
+          font-size: 16px;
+          font-weight: 300;
+          text-transform: capitalize;
+          a {
+          }
+        }
+        li + li {
+          margin-left: 5px;
+        }
+      }
+    }
+    &__main {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 2fr;
+
+      &List {
+      }
+      &Types {
+      }
+    }
+  }
+}

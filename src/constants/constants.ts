@@ -149,3 +149,43 @@ export const ProductList: ListProduct[] = [
     ],
   },
 ];
+
+export const catalogueList = [
+  {
+    id: "category-001",
+    category: "Greenhouse",
+    subCategories: [
+      {
+        id: "item-001",
+        name: "Agronom",
+        link: "/catalogue/agronom",
+      },
+      {
+        id: "item-002",
+        name: "Strelka",
+        link: "/catalogue/strelka",
+      },
+      {
+        id: "item-003",
+        name: "Slavianka",
+        link: "/catalogue/slavianka",
+      },
+    ],
+  },
+  {
+    id: "category-002",
+    category: "Polycarbonate",
+    subCategories: [
+      {
+        id: "item-020",
+        name: "Polycarbonate 6 m",
+        link: "/catalogue/polycarbonate6m",
+      },
+      {
+        id: "item-021",
+        name: "Polycarbonate 8 m",
+        link: "/catalogue/polycarbonate8m",
+      },
+    ],
+  },
+];

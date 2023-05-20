@@ -1,6 +1,7 @@
 import React from "react";
 
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import CatalogueList from "@/components/CatalogueList/CatalogueList";
 
 const CatalogueLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,7 +12,7 @@ const CatalogueLayout = ({ children }: { children: React.ReactNode }) => {
           <div className="categories">
             <Breadcrumbs />
             <div className="categories__main">
-              <div className="categories__mainList">s</div>
+              <CatalogueList />
               <div className="categories__mainTypes">{children}</div>
             </div>
           </div>

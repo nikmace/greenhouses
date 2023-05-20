@@ -93,7 +93,7 @@
   &Cart {
     display: flex;
 
-    img:first-child {
+    &__icon {
       margin-right: 10px;
     }
   }
@@ -103,6 +103,16 @@
   .nav {
     &List {
       display: none;
+    }
+  }
+  .banner {
+    flex-direction: column;
+    &Delivery {
+      width: 100%;
+
+      &__info {
+        max-width: unset;
+      }
     }
   }
 }

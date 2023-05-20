@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "framer-motion": "^10.12.11",

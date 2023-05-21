@@ -189,3 +189,54 @@ export const catalogueList = [
     ],
   },
 ];
+
+interface CatalogueItems {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  alt: string;
+  link: string;
+}
+
+export const catalogueItems: CatalogueItems[] = [
+  {
+    id: "item-001",
+    name: "Agronom",
+    description:
+      "Elevate your gardening game with a greenhouse that creates an ideal haven for your plants. With its transparent walls and roof, it invites abundant sunlight while shielding your precious greens from harsh weather.",
+    image:
+      "https://cdn.shopify.com/s/files/1/0069/5854/6980/products/Sigma20_557x376.jpg?v=1660818069",
+    alt: "Agronom Greenhouse with polycarbonate",
+    link: "/catalogue/agronom",
+  },
+  {
+    id: "item-002",
+    name: "Strelka",
+    description:
+      "With its transparent walls and roof, it invites abundant sunlight while shielding your precious greens from harsh weather.",
+    image:
+      "https://cdn.shopify.com/s/files/1/0069/5854/6980/products/Sigma20_557x376.jpg?v=1660818069",
+    alt: "Strelka Greenhouse with polycarbonate",
+    link: "/catalogue/strelka",
+  },
+  {
+    id: "item-003",
+    name: "Slavianka",
+    description:
+      "Elevate your gardening game with a greenhouse that creates an ideal haven for your plants.",
+    image:
+      "https://cdn.shopify.com/s/files/1/0069/5854/6980/products/Sigma20_557x376.jpg?v=1660818069",
+    alt: "Strelka Greenhouse with polycarbonate",
+    link: "/catalogue/strelka",
+  },
+  {
+    id: "item-020",
+    name: "Polycarbonate",
+    description:
+      "Unleash the power of polycarbonate, the ultimate plastic that delivers on strength and clarity.",
+    image: "/images/polycarbonate.webp",
+    alt: "Polycarbonate for agronom greenhouses",
+    link: "/catalogue/polycarbonate",
+  },
+];

@@ -16,15 +16,19 @@ const ProductInfo = ({ params }) => {
           <div className="grid grid-cols-1 justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             <div className="flex flex-col">
               <p className="text-gray-500">Цена за базовия комплект</p>
-              <span className="text-lg">1200 BGN</span>
+              <span className="text-lg font-normal text-[#f7921e]">
+                1200 лв
+              </span>
             </div>
             <div className="flex flex-col">
               <p className="text-gray-500">Цена за допълнителни опции</p>
-              <span className="text-lg">0 BGN</span>
+              <span className="text-lg font-normal text-[#f7921e]">0 лв</span>
             </div>
             <div className="flex flex-col">
               <p className="text-gray-500">Крайна цена</p>
-              <span className="text-lg">1200 BGN</span>
+              <span className="text-lg font-normal text-[#f7921e]">
+                1200 лв
+              </span>
             </div>
           </div>
           {/** Button group */}

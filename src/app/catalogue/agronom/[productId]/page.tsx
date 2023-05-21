@@ -50,7 +50,7 @@ const ProductInfo = ({ params }) => {
                 влият на стойност
               </span>
             </div>
-            <div className="grid grid-cols-2 gap-4 pt-3">
+            <div className="grid grid-cols-1 gap-4 pt-3 lg:grid-cols-2">
               <div className="pb-4">
                 <SelectMenu
                   label="Поликарбонат"

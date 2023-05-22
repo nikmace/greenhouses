@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
@@ -9,14 +9,24 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+interface SelectedItem {
+  name: string;
+  id: string;
+  baseCost?: number;
+}
+
 export default function SelectMenu({
   items,
   label,
+  selected,
+  setSelected,
 }: {
   label: string;
-  items: { name: string; id: string }[];
+  items: SelectedItem[];
+  selected: SelectedItem;
+  setSelected: any;
 }) {
-  const [selected, setSelected] = useState(items[0]);
+  //   const [selected, setSelected] = useState(items[0]);
 
   return (
     <Listbox value={selected} onChange={setSelected}>
@@ -26,7 +36,7 @@ export default function SelectMenu({
             {label}
           </Listbox.Label>
           <div className="relative mt-2">
-            <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-[#6dc82b] focus:outline-none focus:ring-2 sm:text-sm sm:leading-6">
+            <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-[#6dc82b] sm:text-sm sm:leading-6">
               <span className="flex items-center">
                 {/* <img
                   src={selected.avatar}

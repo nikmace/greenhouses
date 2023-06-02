@@ -6,7 +6,7 @@ import { GreenhouseTypes } from "@/constants/constants";
 const Agronom = () => {
   return (
     <div className="space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0">
-      {GreenhouseTypes.agronom.map((p) => {
+      {GreenhouseTypes.strelka.map((p) => {
         const { constructionType, dimensions, material, pipeType, weight } =
           p.specification;
         return (
@@ -24,34 +24,36 @@ const Agronom = () => {
                 {p.name}
               </Link>
             </h3>
-            {/* <p className="text-md font-semibold text-gray-700">
+            <p className="text-md font-semibold text-gray-700">
               Daily commute essentials
-            </p> */}
+            </p>
             <ul className="mt-2">
               <li className="flex justify-between">
-                <p className="font-light  text-[#b5bac1]">Material</p>
+                <p className="font-normal uppercase text-[#b5bac1]">Material</p>
                 <span className="text-gray-700">{material}</span>
               </li>
               <li className="flex justify-between">
-                <p className="font-light  text-[#b5bac1]">Dimensions</p>
-                <span className="font-light text-gray-700">
+                <p className="font-normal uppercase text-[#b5bac1]">
+                  Dimensions
+                </p>
+                <span className="text-gray-700">
                   {dimensions.length} x {dimensions.width} x {dimensions.height}{" "}
                   m
                 </span>
               </li>
               <li className="flex justify-between">
-                <p className="font-light  text-[#b5bac1]">Item Weight</p>
-                <span className="font-light text-gray-700">{weight}</span>
+                <p className="font-normal uppercase text-[#b5bac1]">
+                  Item Weight
+                </p>
+                <span className="text-gray-700">{weight}</span>
               </li>
               <li className="flex justify-between">
-                <p className="font-light  text-[#b5bac1]">Pipe</p>
-                <span className="font-light text-gray-700">{pipeType}</span>
+                <p className="font-normal uppercase text-[#b5bac1]">Pipe</p>
+                <span className="text-gray-700">{pipeType}</span>
               </li>
               <li className="flex justify-between">
-                <p className="font-light  text-[#b5bac1]">Type</p>
-                <span className="font-light text-gray-700">
-                  {constructionType}
-                </span>
+                <p className="font-normal uppercase text-[#b5bac1]">Type</p>
+                <span className="text-gray-700">{constructionType}</span>
               </li>
             </ul>
             <p className="my-2 text-[#b5bac1]">

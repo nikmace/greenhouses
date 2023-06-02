@@ -1,6 +1,31 @@
 import { PaperClipIcon } from "@heroicons/react/20/solid";
 
-export default function GreenhouseDescription() {
+import { IProduct } from "@/interfaces/types";
+
+interface DescriptionProps {
+  greenhouse: IProduct;
+}
+
+export default function GreenhouseDescription({
+  greenhouse,
+}: DescriptionProps) {
+  const {
+    name,
+    polycarbonate,
+    seoDescription,
+    extraInformation,
+    linkToPricesPDF,
+    linkToSpecificationPDF,
+    specification: {
+      constructionType,
+      dimensions: { height },
+      material,
+      pipeType,
+      weight,
+      availableLengths,
+      spaceBetweenPipes,
+    },
+  } = greenhouse;
   return (
     <div className="pt-8">
       <div className="px-4 sm:px-0">
@@ -8,9 +33,7 @@ export default function GreenhouseDescription() {
           Информация за оранжерия
         </h3>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
-          Оранжерия АГРОНОМ 40 Плюс - Широчина 4 м и АГРОНОМ Эко Лукс/Ботаник -
-          Широчина 3 м. в наличност от склада в София. Стрелка и Премиум
-          Височина 3 м. само по предварителна поръчка.
+          {seoDescription}
         </p>
       </div>
       <div className="mt-6 border-t border-gray-100">
@@ -18,7 +41,7 @@ export default function GreenhouseDescription() {
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
             <dt className="text-sm font-medium leading-6 text-gray-900">Име</dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              АГРОНОМ Эко-Лукс
+              {name}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -26,7 +49,9 @@ export default function GreenhouseDescription() {
               Дължина
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              4м / 6м / 8м / 10м
+              {availableLengths.map((v, idx, arr) => {
+                return `${v.length}м ${arr.length - 1 === idx ? "" : "/ "}`;
+              })}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -34,7 +59,7 @@ export default function GreenhouseDescription() {
               Височина
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              2,1 м
+              {height} м
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -42,7 +67,7 @@ export default function GreenhouseDescription() {
               Растояние между дъгите
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              67см
+              {spaceBetweenPipes}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -50,7 +75,15 @@ export default function GreenhouseDescription() {
               Вид на конструкция
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Заварени панели, болтова връзка
+              {constructionType}
+            </dd>
+          </div>
+          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="text-sm font-medium leading-6 text-gray-900">
+              Материал
+            </dt>
+            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              {material}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -58,7 +91,7 @@ export default function GreenhouseDescription() {
               Тръба
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Поцинкован профил 40 х 20 мм
+              {pipeType}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -66,7 +99,7 @@ export default function GreenhouseDescription() {
               Тегло
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              46кг на 4 метра + всяко удължаване на 2 метра 14,5кг
+              {weight}кг на 4 метра + всяко удължаване на 2 метра 14,5кг
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -74,9 +107,7 @@ export default function GreenhouseDescription() {
               Поликарбонат
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Многокамерен поликарбонат с УВ защита. Дебелина - 4 мм. Плътност -
-              600 гр/м2. Цвят – прозрачен В комплекта са включени Т-образните
-              крачета за закрепване в земята
+              {polycarbonate}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -84,11 +115,7 @@ export default function GreenhouseDescription() {
               Допълнителна информация
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-              Закрепване на поликарбонат с поцинковани самонеразни винтове с
-              гумено уплътнение и шайба. При монтаж на оранжерията на ветровити
-              места, е необходимо допълнително закрепване за земята с подръчни
-              материали. Гаранционен срок 3 години. Монтаж - по инструкцията или
-              с помоща на нашите майстор
+              {extraInformation}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
@@ -115,10 +142,10 @@ export default function GreenhouseDescription() {
                   </div>
                   <div className="ml-4 flex-shrink-0">
                     <a
-                      href="#"
+                      href={linkToSpecificationPDF}
                       className="font-medium text-indigo-600 hover:text-indigo-500"
                     >
-                      Download
+                      Свали файл
                     </a>
                   </div>
                 </li>
@@ -137,10 +164,10 @@ export default function GreenhouseDescription() {
                   </div>
                   <div className="ml-4 flex-shrink-0">
                     <a
-                      href="#"
+                      href={linkToPricesPDF}
                       className="font-medium text-indigo-600 hover:text-indigo-500"
                     >
-                      Download
+                      Свали файл
                     </a>
                   </div>
                 </li>

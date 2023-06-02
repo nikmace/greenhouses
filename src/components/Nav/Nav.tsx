@@ -14,31 +14,31 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 
 const navItems = [
   {
-    name: "Home",
+    name: "Главна",
     linkTo: "/",
   },
   {
-    name: "Catalogue",
+    name: "Каталог",
     linkTo: "/catalogue",
   },
   {
-    name: "Payment",
+    name: "Плащане",
     linkTo: "/payment",
   },
   {
-    name: "Delivery",
+    name: "Доставка",
     linkTo: "/delivery",
   },
   {
-    name: "Installation",
+    name: "Монтаж",
     linkTo: "/installation",
   },
   {
-    name: "Contacts",
+    name: "Контакти",
     linkTo: "/contacts",
   },
   {
-    name: "About",
+    name: "За Нас",
     linkTo: "/about",
   },
 ];

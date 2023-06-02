@@ -23,7 +23,7 @@ const ProductInfo = ({ params }: Props) => {
   /**
    * Find the product and display it
    */
-  const greenhouse = GreenhouseTypes.agronom.find((v) => v.id === productId);
+  const greenhouse = GreenhouseTypes.strelka.find((v) => v.id === productId);
 
   return (
     <>

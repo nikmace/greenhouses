@@ -1,21 +1,25 @@
 "use client";
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import SelectMenu from "../SelectMenu/SelectMenu";
+
+import { IProduct } from "@/interfaces/types";
 
 const polycarbonateItems = [
   {
     id: "4mmPolycarbonate001",
     name: "4 мм (плътност 0,47 кг/кв.м., гарантия 10 г.)",
+    baseValue: 30,
   },
   {
     id: "4mmPolycarbonate002",
     name: "4 мм (плътност 0,6 кг/м2 гарантия 15 г.)",
+    baseValue: 35,
   },
   {
     id: "4mmPolycarbonate003",
     name: "4мм (плътност 0,63 кг/кв.м, гарантия 18 г.)",
+    baseValue: 40,
   },
 ];
 
@@ -38,22 +42,32 @@ const extraWindows = [
   {
     id: "extrawindow001",
     name: "не",
+    amount: 0,
+    price: 0,
   },
   {
     id: "extrawindow002",
     name: "1",
+    amount: 1,
+    price: 30,
   },
   {
     id: "extrawindow003",
     name: "2",
+    amount: 2,
+    price: 60,
   },
   {
     id: "extrawindow004",
     name: "3",
+    amount: 3,
+    price: 90,
   },
   {
     id: "extrawindow005",
     name: "4",
+    amount: 4,
+    price: 120,
   },
 ];
 
@@ -61,22 +75,27 @@ const extraWindowAssemblies = [
   {
     id: "extrawindow-assembly001",
     name: "не",
+    baseValue: 0,
   },
   {
     id: "extrawindow-assembly002",
     name: "1",
+    baseValue: 1,
   },
   {
     id: "extrawindow-assembly003",
     name: "2",
+    baseValue: 2,
   },
   {
     id: "extrawindow-assembly004",
     name: "3",
+    baseValue: 3,
   },
   {
     id: "extrawindow-assembly005",
     name: "4",
+    baseValue: 4,
   },
 ];
 
@@ -84,10 +103,12 @@ const assembliesUnder60 = [
   {
     id: "assembly-under001",
     name: "не",
+    baseValue: 0,
   },
   {
     id: "assembly-under002",
     name: "да",
+    baseValue: 1,
   },
 ];
 
@@ -95,10 +116,12 @@ const assembliesAbove60 = [
   {
     id: "assembly-above001",
     name: "не",
+    baseValue: 0,
   },
   {
     id: "assembly-above002",
     name: "да",
+    baseValue: 1,
   },
 ];
 
@@ -106,20 +129,33 @@ const foundationsWood = [
   {
     id: "foundation-wood001",
     name: "не",
+    baseValue: 0,
   },
   {
     id: "foundation-wood002",
     name: "да",
+    baseValue: 1,
   },
 ];
+
+const windowPrice = 30;
+
+// const extraWindowsPrice = 40;
+// const extraWindowAssembliesPrice = 20;
 
 interface SelectedItem {
   name: string;
   id: string;
-  baseCost?: number;
+  price?: number;
+  amount?: number;
 }
 
-const GreenhouseConstructor = () => {
+interface ConstructorProps {
+  greenhouse: IProduct;
+}
+
+const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
+  const { price } = greenhouse;
   const [polycarbonate, setPolycarbonate] = useState<SelectedItem>(
     polycarbonateItems[0]
   );
@@ -139,6 +175,14 @@ const GreenhouseConstructor = () => {
   const [foundationWood, setFoundationWood] = useState<SelectedItem>(
     foundationsWood[0]
   );
+
+  const [totalPrice, setTotalPrice] = useState<number>(price);
+  const [totalOptionsPrice, setTotalOptionsPrice] = useState<number>(0);
+
+  useEffect(() => {
+    setTotalOptionsPrice((prev) => prev + extraWindow.price!);
+  }, [extraWindow, totalOptionsPrice]);
+
   return (
     <div className="pt-8">
       <div>
@@ -146,15 +190,21 @@ const GreenhouseConstructor = () => {
         <div className="grid grid-cols-1 justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           <div className="flex flex-col">
             <p className="text-gray-500">Цена за базовия комплект</p>
-            <span className="text-lg font-normal text-[#f7921e]">1200 лв</span>
+            <span className="text-lg font-normal text-[#f7921e]">
+              {price} лв
+            </span>
           </div>
           <div className="flex flex-col">
             <p className="text-gray-500">Цена за допълнителни опции</p>
-            <span className="text-lg font-normal text-[#f7921e]">0 лв</span>
+            <span className="text-lg font-normal text-[#f7921e]">
+              {totalOptionsPrice} лв
+            </span>
           </div>
           <div className="flex flex-col">
             <p className="text-gray-500">Крайна цена</p>
-            <span className="text-lg font-normal text-[#f7921e]">1200 лв</span>
+            <span className="text-lg font-normal text-[#f7921e]">
+              {totalPrice} лв
+            </span>
           </div>
         </div>
         {/** Button group */}
@@ -246,7 +296,7 @@ const GreenhouseConstructor = () => {
             </div>
             <div className="pb-4">
               <SelectMenu
-                label="Монтаж теплицы до 60 км"
+                label="Доставка теплицы до 60 км"
                 items={assembliesUnder60}
                 selected={assemblyUnder60}
                 setSelected={setAssemblyUnder60}
@@ -254,7 +304,7 @@ const GreenhouseConstructor = () => {
             </div>
             <div className="pb-4">
               <SelectMenu
-                label="Монтаж теплицы от 60 км"
+                label="Доставка теплицы от 60 км"
                 items={assembliesAbove60}
                 selected={assemblyAbove60}
                 setSelected={setAssemblyAbove60}

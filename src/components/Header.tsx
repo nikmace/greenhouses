@@ -22,7 +22,7 @@ const Header = () => {
               alt="Delivery Truck"
             />
             <div className="bannerDelivery__info">
-              <p>Free greenhouse delivery under 100km from Sofia</p>
+              <p>Бесплатна доставка на оранжерии под 60км от София</p>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ export default function GreenhouseDescription({
   return (
     <div className="pt-8">
       <div className="px-4 sm:px-0">
-        <h3 className="text-base font-semibold leading-7 text-gray-900">
+        <h3 className="text-base font-medium leading-7 text-gray-900">
           Информация за оранжерия
         </h3>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
@@ -39,13 +39,13 @@ export default function GreenhouseDescription({
       <div className="mt-6 border-t border-gray-100">
         <dl className="divide-y divide-gray-100">
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">Име</dt>
+            <dt className="text-sm font-semibold leading-6 text-gray-900">Име</dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               {name}
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Дължина
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -55,7 +55,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Височина
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -63,7 +63,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Растояние между дъгите
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -71,7 +71,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Вид на конструкция
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -79,7 +79,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Материал
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -87,7 +87,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Тръба
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -95,7 +95,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Тегло
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -103,7 +103,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Поликарбонат
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -111,7 +111,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Допълнителна информация
             </dt>
             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
@@ -119,7 +119,7 @@ export default function GreenhouseDescription({
             </dd>
           </div>
           <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt className="text-sm font-medium leading-6 text-gray-900">
+            <dt className="text-sm font-semibold leading-6 text-gray-900">
               Attachments
             </dt>
             <dd className="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">

@@ -4,7 +4,7 @@ export const GreenhouseTypes: IGreenhouse = {
   agronom: [
     {
       id: "agronom-standard",
-      name: "Агроном Standard",
+      name: "Агроном Standard - 3м",
       price: 1200,
       link: "/catalogue/agronom/agronom-standard",
       linkToSpecificationPDF: "/",

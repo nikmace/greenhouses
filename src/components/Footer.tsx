@@ -14,7 +14,7 @@ const Footer = () => {
                 src="/images/logo.png"
                 alt="Agromir Logo"
               />
-              <h3>Agromir</h3>
+              <h3>Агромир</h3>
             </div>
             <p className="footer__innerCompany__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi

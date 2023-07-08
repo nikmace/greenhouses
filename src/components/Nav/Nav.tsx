@@ -60,7 +60,7 @@ const Nav = () => {
           src="/images/logo.png"
           alt="Agromir Logo"
         />
-        <h3>Agromir</h3>
+        <h3>Агромир</h3>
       </Link>
       <ul className="navList">
         {navItems.map((navItem) => (

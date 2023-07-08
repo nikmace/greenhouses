@@ -1,0 +1,38 @@
+.delivery {
+  padding: 40px 0px 60px 0px;
+
+  &__inner {
+    &Banner {
+      padding-bottom: 20px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+  }
+
+  &-list {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+
+        &::before {
+          content: "•"; /* Bullet point */
+          /* content: "-"; */ /* Dash */
+          position: absolute;
+          margin-left: -20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .payment {
+    &-table {
+      min-width: unset;
+    }
+  }
+}

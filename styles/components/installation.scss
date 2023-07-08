@@ -1,0 +1,19 @@
+.installation {
+  padding: 40px 0px 60px 0px;
+
+  &__inner {
+    &Banner {
+      padding-bottom: 20px;
+      font-size: 22px;
+      font-weight: 300;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .payment {
+    &-table {
+      min-width: unset;
+    }
+  }
+}

@@ -19,17 +19,17 @@ export default function SelectMenu({
   items,
   label,
   selected,
-  setSelected,
+  handleChange
 }: {
   label: string;
   items: SelectedItem[];
   selected: SelectedItem;
-  setSelected: any;
+  handleChange?: (item: SelectedItem) => void;
 }) {
   //   const [selected, setSelected] = useState(items[0]);
-
+  handleChange
   return (
-    <Listbox value={selected} onChange={setSelected}>
+    <Listbox value={selected} onChange={handleChange}>
       {({ open }) => (
         <>
           <Listbox.Label className="text-md block font-medium leading-6 text-gray-600">

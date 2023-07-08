@@ -42,32 +42,37 @@ const extraWindows = [
   {
     id: "extrawindow001",
     name: "не",
-    amount: 0,
-    price: 0,
+    baseValue: 0,
   },
   {
     id: "extrawindow002",
     name: "1",
-    amount: 1,
-    price: 30,
+    baseValue: 30,
   },
   {
     id: "extrawindow003",
     name: "2",
-    amount: 2,
-    price: 60,
+    baseValue: 60,
   },
   {
     id: "extrawindow004",
     name: "3",
-    amount: 3,
-    price: 90,
+    baseValue: 90,
   },
   {
     id: "extrawindow005",
     name: "4",
-    amount: 4,
-    price: 120,
+    baseValue: 120,
+  },
+  {
+    id: "extrawindow006",
+    name: "5",
+    baseValue: 150,
+  },
+  {
+    id: "extrawindow007",
+    name: "6",
+    baseValue: 180,
   },
 ];
 
@@ -148,6 +153,7 @@ interface SelectedItem {
   id: string;
   price?: number;
   amount?: number;
+  baseValue?: number;
 }
 
 interface ConstructorProps {
@@ -162,6 +168,7 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
   const [polycarbonateLength, setPolycarbonateLength] = useState<SelectedItem>(
     polycarbonateLengths[0]
   );
+  const [polycarbonateAmount, setPolycarbonateAmount] = useState<number>(0);
   const [extraWindow, setExtraWindow] = useState<SelectedItem>(extraWindows[0]);
   const [extraWindowAssembly, setExtraWindowAssembly] = useState<SelectedItem>(
     extraWindowAssemblies[0]
@@ -179,9 +186,38 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
   const [totalPrice, setTotalPrice] = useState<number>(price);
   const [totalOptionsPrice, setTotalOptionsPrice] = useState<number>(0);
 
+  // useEffect(() => {
+  //   setTotalOptionsPrice((prev) => prev + extraWindow.price!);
+  // }, [extraWindow, totalOptionsPrice]);
+
+  const recalculatePolyAmount = (amount: number, item: SelectedItem) => {
+    const total = item.baseValue! * amount;
+    setPolycarbonateAmount(amount);
+    setTotalOptionsPrice(total);
+  };
+
+  const handleChangePolycarbonate = (item: SelectedItem) => {
+    setPolycarbonate(item);
+    const total = item.baseValue! * polycarbonateAmount;
+    setTotalOptionsPrice(total);
+  };
+
+  const handleWindowChange = (item: SelectedItem) => {
+    let total;
+    if (item.baseValue! > extraWindow.baseValue!) {
+      total = totalOptionsPrice + item.baseValue!;
+      console.log("Item base value is BIGGER than previous value");
+    } else if (item.baseValue! < extraWindow.baseValue!) {
+      total = totalOptionsPrice - item.baseValue!;
+      console.log("Item base value is LESS than previous value");
+    }
+    setExtraWindow(item);
+    setTotalOptionsPrice(total);
+  };
+
   useEffect(() => {
-    setTotalOptionsPrice((prev) => prev + extraWindow.price!);
-  }, [extraWindow, totalOptionsPrice]);
+    setTotalPrice(price + totalOptionsPrice);
+  }, [totalOptionsPrice]);
 
   return (
     <div className="pt-8">
@@ -236,16 +272,16 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
                 label="Поликарбонат"
                 items={polycarbonateItems}
                 selected={polycarbonate}
-                setSelected={setPolycarbonate}
+                handleChange={handleChangePolycarbonate}
               />
             </div>
             <div className="pb-4">
-              <SelectMenu
+              {/* <SelectMenu
                 label="Дължина"
                 items={polycarbonateLengths}
                 selected={polycarbonateLength}
-                setSelected={setPolycarbonateLength}
-              />
+                // setSelected={setPolycarbonateLength}
+              /> */}
             </div>
             <div className="w-32 pb-4">
               <p className="text-md font-medium leading-6 text-gray-600">
@@ -262,7 +298,10 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
                   step={1}
                   min={1}
                   max={10}
-                  defaultValue={1}
+                  defaultValue={polycarbonateAmount}
+                  onChange={(e) =>
+                    recalculatePolyAmount(Number(e.target.value), polycarbonate)
+                  }
                   className="block w-full rounded-md border-0 py-1.5 pl-7 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#6dc82b] sm:text-sm sm:leading-6"
                 />
               </div>
@@ -283,7 +322,7 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
                 label="Доп. форточка в крышу"
                 items={extraWindows}
                 selected={extraWindow}
-                setSelected={setExtraWindow}
+                handleChange={handleWindowChange}
               />
             </div>
             <div className="pb-4">
@@ -291,7 +330,6 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
                 label="Монтаж доп. форточки в крышу"
                 items={extraWindowAssemblies}
                 selected={extraWindowAssembly}
-                setSelected={setExtraWindowAssembly}
               />
             </div>
             <div className="pb-4">
@@ -299,7 +337,6 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
                 label="Доставка теплицы до 60 км"
                 items={assembliesUnder60}
                 selected={assemblyUnder60}
-                setSelected={setAssemblyUnder60}
               />
             </div>
             <div className="pb-4">
@@ -307,7 +344,6 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
                 label="Доставка теплицы от 60 км"
                 items={assembliesAbove60}
                 selected={assemblyAbove60}
-                setSelected={setAssemblyAbove60}
               />
             </div>
             <div className="pb-4">
@@ -315,7 +351,6 @@ const GreenhouseConstructor: React.FC<ConstructorProps> = ({ greenhouse }) => {
                 label="Фундамент деревянный"
                 items={foundationsWood}
                 selected={foundationWood}
-                setSelected={setFoundationWood}
               />
             </div>
           </div>
